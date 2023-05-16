@@ -8,6 +8,7 @@ export interface IOrder extends Document {
     number: number
     cost: string
     madeAt: number
+    created_at: Date
 }
 
 const OrderSchema = new Schema({
@@ -31,6 +32,10 @@ const OrderSchema = new Schema({
     },
     madeAt: {
         type: Number,
+        default: Date.now
+    },
+    created_at: {
+        type: Date,
         default: Date.now
     }
 })

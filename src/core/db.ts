@@ -13,7 +13,8 @@ db.once('open', () => {
 })
 
 export default class Database {
-    url = `mongodb://localhost:${config.MongoPort}/${config.MongoDatabase}`
+    // url = `mongodb://localhost:${config.MongoPort}/${config.MongoDatabase}`
+    url = `${process.env.database_url}`
 
     constructor() {
         logger.info(`DB: DATABASE URL: ${this.url}`)

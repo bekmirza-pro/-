@@ -9,7 +9,7 @@ const controller = new CategoryController()
 const validator = new CategoryValidator()
 const middleware = new Middleware()
 
-const upload = multer([ 'image/jpeg', 'image/png'], 10).single('images')
+const upload = multer(['image/jpeg' , 'image/png'], 10).single('images')
 
 router.route('/all').get(controller.getAll)
 router.route('/create').post(middleware.auth(['admin']), upload, validator.create, controller.create)

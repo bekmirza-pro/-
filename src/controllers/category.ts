@@ -46,7 +46,7 @@ export class CategoryController {
     create = catchAsync(async (req: Request, res: Response, next: NextFunction) => {
         let photo
         // await storage.category.update(req.body.category, {})
-
+        
         if (req.file) {
             photo = `images/${req.file.fieldname}-${uuidv4()}`
 
