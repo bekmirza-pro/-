@@ -14,6 +14,7 @@ db.once('open', () => {
 
 export default class Database {
     // url = `mongodb://localhost:${config.MongoPort}/${config.MongoDatabase}`
+    //bekmirza
     url = `${process.env.database_url}`
 
     constructor() {
