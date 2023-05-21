@@ -48,7 +48,7 @@ export class CategoryController {
         // await storage.category.update(req.body.category, {})
         
         if (req.file) {
-            photo = `images/${req.file.fieldname}-${uuidv4()}`
+            photo = `${req.file.fieldname}-${uuidv4()}`
 
             await sharp(req.file.buffer)
                 .jpeg()
