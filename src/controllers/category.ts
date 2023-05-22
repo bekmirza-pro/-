@@ -52,7 +52,7 @@ export class CategoryController {
 
             await sharp(req.file.buffer)
                 .jpeg()
-                .toFile(path.join(__dirname, '../../uploads', `${photo}.jpg`))
+                .toFile(path.join(__dirname, '../../uploads/images', `${photo}.jpg`))
         }
         const category = await storage.category.create({
             ...req.body,
